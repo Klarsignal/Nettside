@@ -1,0 +1,4 @@
+# Netlify publiserer hele kodeområdet som det er. Det er ingen byggesteg.
+[build]
+  publish = "."
+  command = ""
