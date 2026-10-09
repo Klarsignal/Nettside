@@ -5,6 +5,7 @@ Den offentlige nettsiden for Klarsignal. Netlify henter siden herfra og publiser
 | Fil | Hva |
 |---|---|
 | `index.html` | Forsiden med venteliste |
+| `bergen.html` | Veiviser: søknader, dokumentasjonskrav, andre etater og gebyrer i Bergen. Kilder og dato står på siden; oppdater dato når innholdet kontrolleres på nytt |
 | `personvern.html` | Personvernerklæring for påmeldingsskjemaet |
 | `takk.html` | Siden folk ser etter påmelding |
 | `styles.css` | All stil |

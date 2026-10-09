@@ -189,3 +189,51 @@ details p { margin: 0; padding: 0 48px 24px 0; color: var(--text-2); }
 .page h1 { font-size: clamp(36px, 5vw, 56px); margin-bottom: 24px; }
 .page h2 { font-size: 22px; margin: 40px 0 8px; }
 .page p, .page li { color: var(--text-2); }
+
+/* Veiviser: Byggesak i Bergen */
+.guide-hero { display: flex; flex-direction: column; gap: 22px; padding-block: 40px 80px; max-width: 900px; }
+.guide-hero h1 { font-size: clamp(42px, 6vw, 80px); }
+.guide { display: flex; flex-direction: column; gap: 56px; padding-block: 56px 112px; }
+.notice { background: #FFF4EC; border: 1px solid #F5C9A8; border-left: 6px solid var(--fire); border-radius: 14px; padding: 22px 26px; }
+.notice p { margin: 8px 0 0; color: var(--text-2); }
+.tag { display: inline-block; padding: 1px 9px; border-radius: 999px; background: #FFE3D1; color: #8A3410; font-family: var(--mono); font-size: 12px; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; vertical-align: 1px; }
+.toc { border-top: 3px solid var(--ink); padding-top: 18px; }
+.toc ol { margin: 10px 0 0; padding-left: 22px; columns: 2 240px; column-gap: 40px; }
+.toc li { padding-block: 3px; }
+.guide-section { display: flex; flex-direction: column; gap: 20px; scroll-margin-top: 24px; }
+.guide-section > h2 { font-size: clamp(28px, 3.4vw, 42px); }
+.guide-section > p { margin: 0; max-width: 72ch; color: var(--text-2); }
+.guide-section h3 { margin: 0 0 8px; font-size: 19px; font-weight: 600; }
+.hint { font-size: 15px; }
+.tabell { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--white); }
+.tabell table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 15px; line-height: 1.5; }
+.tabell th, .tabell td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid #EEF2F0; }
+.tabell thead th { background: var(--ink); color: var(--white); font-weight: 600; font-size: 14px; position: sticky; top: 0; }
+.tabell tbody tr:last-child th, .tabell tbody tr:last-child td { border-bottom: 0; }
+.tabell tbody th { font-weight: 600; min-width: 160px; }
+.tabell td { color: var(--text-2); }
+.ref { font-family: var(--mono); font-size: 12px; font-weight: 400; color: var(--text-3); }
+.cols { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }
+.cols.three { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+.box { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 24px 26px; }
+.box ul, .plain, .kilder ul { margin: 0 0 12px; padding-left: 20px; color: var(--text-2); }
+.box li, .plain li, .kilder li { padding-block: 3px; }
+.box ul:last-child { margin-bottom: 0; }
+.box h3 + ul { margin-top: 4px; }
+.box ul + h3 { margin-top: 18px; }
+.warn { margin: 12px 0 0; padding: 12px 14px; border-radius: 10px; background: #FFF4EC; color: #6B2A0C; font-size: 15px; }
+.plain { max-width: 80ch; }
+.kilder ul { font-size: 15px; }
+.guide-cta { background: var(--ink); color: var(--white); border-radius: 24px; padding: 48px; display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+.guide-cta h2 { font-size: clamp(28px, 3.4vw, 44px); }
+.guide-cta p { margin: 0; max-width: 60ch; color: var(--on-dark-2); }
+@media (max-width: 600px) { .guide-cta { padding: 32px 24px; } .box { padding: 20px; } }
+@media (max-width: 700px) {
+  .tabell { overflow: visible; border: 0; background: none; }
+  .tabell table { min-width: 0; }
+  .tabell thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .tabell tr { display: block; background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 6px 0; margin-bottom: 12px; }
+  .tabell th, .tabell td { display: block; border: 0; padding: 6px 18px; }
+  .tabell tbody th { font-size: 17px; padding-top: 12px; }
+  .tabell td[data-label]::before { content: attr(data-label); display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-3); }
+}
