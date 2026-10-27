@@ -130,11 +130,30 @@ a:hover { color: #075C38; }
 .footnote { margin: 0; font-size: 14px; color: var(--text-3); max-width: 80ch; }
 
 .white-band { background: var(--white); border-block: 1px solid var(--line); }
-.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 40px 32px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
-.steps li { display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 3px solid var(--ink); }
-.steps .num { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: 44px; line-height: 1; color: var(--signal-text); }
-.steps h3 { margin: 0; font-size: 21px; font-weight: 600; }
-.steps p { margin: 0; color: var(--text-2); }
+
+/* Slik går en sak: stegene som en tidslinje, med hvem som gjør hva */
+.ingress-lys { margin: -28px 0 0; font-size: 19px; color: var(--text-2); max-width: 62ch; }
+.tidslinje-tittel { margin: 16px 0 -24px; font-size: 13px; font-weight: 400; color: var(--text-3); }
+.tidslinje { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.tidslinje.fire { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.tidslinje li { position: relative; display: flex; flex-direction: column; gap: 8px; padding-right: 20px; min-width: 0; }
+.tidslinje li::before { content: ""; position: absolute; top: 17px; left: 36px; right: 0; height: 2px; background: #B7C2BF; }
+.tidslinje li:last-child::before { display: none; }
+.tidslinje .nr { width: 36px; height: 36px; border-radius: 50%; border: 2px solid #B7C2BF; background: var(--white); display: grid; place-items: center; font-family: var(--mono); font-size: 14px; position: relative; z-index: 1; font-variant-numeric: tabular-nums; }
+.tidslinje .hvem { margin-top: 6px; font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-3); }
+.tidslinje h3 { margin: 0; font-size: 18px; font-weight: 600; line-height: 1.25; }
+.tidslinje p { margin: 0; font-size: 15px; line-height: 1.5; color: var(--text-2); }
+.tidslinje .menneske .nr { border-color: var(--signal); background: #E7F8F0; color: var(--signal-text); }
+.tidslinje .menneske .hvem, .tidslinje .menneske h3 { color: var(--signal-text); }
+.tidslinje .kommunen .nr { border-color: var(--ink); background: var(--ink); color: var(--white); }
+.tidslinje-merk { margin-top: -8px; }
+@media (max-width: 900px) {
+  .tidslinje, .tidslinje.fire { grid-template-columns: 1fr; gap: 24px; }
+  .tidslinje li { padding: 0 0 0 52px; }
+  .tidslinje .nr { position: absolute; left: 0; top: 0; }
+  .tidslinje li::before { top: 36px; bottom: -24px; left: 17px; right: auto; width: 2px; height: auto; }
+  .tidslinje .hvem { margin-top: 0; }
+}
 
 .service { min-height: 220px; gap: 12px; padding: 32px; }
 .service .eyebrow { color: var(--signal-text); }
